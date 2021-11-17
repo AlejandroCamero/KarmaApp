@@ -1,7 +1,5 @@
 package com.example.demo.services;
 
-
-
 import com.example.demo.entity.Usuario;
 
 public interface UsuarioService {

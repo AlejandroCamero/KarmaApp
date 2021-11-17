@@ -1,0 +1,3 @@
+<div th:if="${session.usuario!=null}">
+     <a th:if="${session.usuario.role == 'ROLE_ADMIN'}" class="btn btn-primary" th:href="{/public/addCharacter}">Add</a>
+</div>

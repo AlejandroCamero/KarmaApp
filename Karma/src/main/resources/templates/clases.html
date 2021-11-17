@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Karma</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav th:fragment="navbar" class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/public/index}">KARMA  <i class="bi bi-yin-yang m-auto"></i></a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <h1 class="mb-5">Seven options, which one will you be?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Icons Grid-->
+        
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/enhancer.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Enhancer</h2>
+                        <p class="lead mb-0">Able to increase physical capabilities (Make bones / muscles harder, channel energy at one point, etc)
+
+You are a simple, predictable person. Rational thinking is not your thing but when it comes to bravery and honor you are always the first to rise.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" th:style="'background: url(/assets/img/summoner.png)'"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Summoner</h2>
+                        <p class="lead mb-0">Capable of summoning anything from weapons to animals.
+
+Summoners are usually cold people. Unlike enhancers, rational and logical thinking is your thing. Honor does not exist in your dictionary and courage you have what is fair and necessary.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/elementary.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Elementary</h2>
+                        <p class="lead mb-0">Able to manipulate the elements (Water, Fire, Earth, Air)
+
+You are quite a normal person. You have always felt a connection with nature but have never considered why. You like animals a lot and they like you a lot</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" th:style="'background: url(/assets/img/conductor.png)'"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Conductor</h2>
+                        <p class="lead mb-0">Ability to drive external Karma without any damage
+
+You have a lot of similarities to the enhancer, however honor is not your thing. You know that you are very strong against Karma and you take advantage of that in your own way.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/sensory.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Sensory</h2>
+                        <p class="lead mb-0">Ability to detect around you what is happening (From listening better to knowing who is using Karma in a certain area)
+
+They are cautious, observant and insightful people. Too careful, they think about everything 5 or 6 times before doing it</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" th:style="'background: url(/assets/img/mentalist.png)'"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Mentalist</h2>
+                        <p class="lead mb-0">Ability to manipulate the human mind. Either from turning emotions on or off. Until you give an order and have to accept it.
+
+You are very charismatic, you like to attract attention when necessary. You are a born leader and you are good at convincing people to help you.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/linker.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Linker</h2>
+                        <p class="lead mb-0">Ability to link objects and / or living beings.
+
+You are a person who relies on others. You know that you are strong but you have always felt safer with someone by your side that you know can save you from something serious</p>
+                    </div>
+                </div>   
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" th:style="'background: url(/assets/img/unique.png)'"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Unique</h2>
+                        <p class="lead mb-0">Ability to handle all classes and / or have a skill that does not correspond to any of them
+
+You're weird, and you've always been told that. You don't follow orders like anyone else. You see the world in a different way than you have been taught. You are a dreamer, imaginative, creative. You do everything differently but you still do it well
+
+However, a single Karma user can have quite a complex personality. You can impersonate any of the other classes if you want to, although one will always predominate.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/imbucer.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Imbucer</h2>
+                        <p class="lead mb-0">Ability to grant Karma to objects
+
+You have always been a very comedian, you like to laugh a lot but when you talk about work you are the first to concentrate and not get distracted by anything. A person who takes the reins of his life very tightly and is not influenced by anything.
+
+This class is the only one that does not correspond to any site in the heptagon.
+
+It is an isolated class, which cannot access the others</p>
+                    </div>
+                </div>
+                                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" th:style="'background: url(/assets/img/negativeheptagone.png)'"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Negative Heptagone</h2>
+                        <p class="lead mb-0">By being positioned in a class, you can also gain abilities from the closest classes.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" th:style="'background: url(/assets/img/positiveheptagone.png)'"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Positive Heptagone</h2>
+                        <p class="lead mb-0">For example: A positive Enhancer, has 75% of the Elemental and Mentalist classes at his disposal. 40% Conductor and Summoner. 10% Linker and Sensory.</p>
+                    </div>
+                </div>    
+                      
+           </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer th:replace="base :: footer" class="footer bg-light">
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

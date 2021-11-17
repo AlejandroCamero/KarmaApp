@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Karma</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav th:fragment="navbar" class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/public/index}">KARMA  <i class="bi bi-yin-yang m-auto"></i></a>
+                <a class="btn btn-primary" th:href="@{/public/characters}">Characters</a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <!-- Page heading-->
+                            <form class="form-subscribe" id="contactForm" th:object="${character}" method="POST" enctype="multipart/form-data" th:action="@{/admin/post-character}">
+                                <!-- Email address input-->
+                                <div class="row">
+                                    <div class="col">
+                                    	<input class="form-control form-control-lg" th:field="*{id}" id="id" type="hidden" placeholder="id" name="id"/>
+                                        <input class="form-control form-control-lg" th:field="*{name}" id="name" type="text" placeholder="Name" name="name"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{surname}" id="surname" type="text" placeholder="Surname" name="surname"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{strength}" id="strength" type="number" placeholder="Strength" name="strength"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{skill}" id="skill" type="number" placeholder="Skill" name="skill"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{constitution}" id="constitution" type="number" placeholder="Constitution" name="constitution"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{intelligence}" id="intelligence" type="number" placeholder="Intelligence" name="intelligence"/>
+                                        <br>
+                                     </div>
+                                     <div class="col">
+                                        <input class="form-control form-control-lg" th:field="*{wisdom}" id="wisdom" type="number" placeholder="Wisdom" name="wisdom"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{karma}" id="karma" type="number" placeholder="Karma" name="karma"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{positive}" id="positive" type="number" placeholder="Positive points" name="positive"/>
+                                        <br>
+                                        <input class="form-control form-control-lg" th:field="*{negative}" id="negative" type="number" placeholder="Negative points" name="negative"/>
+                                        <br>
+                                        <select id="clase" name="clase" class="form-select">
+                                        	<div th:each="clase: ${clases}">
+                                        		<option th:value="${clase.id}" th:text="${clase.name}"></option>
+                                        	</div>
+                                        </select>
+                                        <br>
+                                        <input class="form-control form-control-lg" id="file" type="file" name="file"/>
+                                        <br>
+                                      </div>
+                                      <textarea class="form-control form-control-lg" th:field="*{history}" id="history" type="text" placeholder="History" name="history" row="50"></textarea>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                  	<button class="btn btn-primary btn-lg" id="submitButton" type="submit">Go!</button>
+                                  </div>
+                            </form>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+        </header>
+       
+        <footer th:replace="base :: footer" class="footer bg-light">
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

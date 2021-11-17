@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Karma</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+        <style>
+        .videoDiv
+			{
+			    width: 100%; /*or whatever % you prefer*/
+			    height:100%;
+			    margin: 0 auto;
+			    display: block;
+			}
+</style>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav th:fragment="navbar" class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/public/index}">KARMA  <i class="bi bi-yin-yang m-auto"></i></a>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <h1 class="mb-5">Trailer</h1>
+                            <div class="center">
+	                            <video class="videoDiv" width="1280" height="720" controls>
+								  <source src="/assets/img/trailer.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								</video>
+							</div>
+                        </div>
+
+                     </div>
+                 </div>
+         	</div>
+        </header>
+       
+        <footer th:replace="base :: footer" class="footer bg-light">
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script th:src="@{/js/scripts.js}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

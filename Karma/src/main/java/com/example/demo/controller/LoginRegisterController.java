@@ -16,6 +16,12 @@ public class LoginRegisterController {
 	@Autowired
 	private UsuarioService usuarioService;
 	
+	@GetMapping("/")
+	public String slash() {
+		
+		return "redirect:/auth/login";
+	}
+	
 	@GetMapping("/auth/login")
 	public String loginForm(Model model) {
 		model.addAttribute("usuario",new Usuario());
@@ -30,6 +36,7 @@ public class LoginRegisterController {
 	
 	@PostMapping("/auth/register")
 	public String register(@ModelAttribute Usuario usuario, Model model) {
+		usuario.setRole("ROLE_USER");
 		model.addAttribute("usuario",usuarioService.register(usuario));
 		return "redirect:/auth/login";
 	}
