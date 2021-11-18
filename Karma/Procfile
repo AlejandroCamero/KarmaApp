@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/KarmaApplication.class
+web: java -Dserver.port=$PORT -jar target/Karma-0.0.1-SNAPSHOT.jar
