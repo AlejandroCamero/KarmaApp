@@ -44,7 +44,7 @@ public class CharacterServiceImpl implements CharacterService{
 	
 	public void uploadFile(MultipartFile file) {
 		try {
-			file.transferTo(new File("/static/assets/img/"+file.getOriginalFilename()));
+			file.transferTo(new File("\\static\\assets\\img\\"+file.getOriginalFilename()));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
