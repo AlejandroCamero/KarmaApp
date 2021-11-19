@@ -93,7 +93,7 @@ public class AdminController {
 			model.addAttribute("character",characterService.add(character));
 		}else {
 			String image=storageService.store(file, character.getId());
-			String[] path = MvcUriComponentsBuilder.fromMethodName(FileController.class, "serveFile", image).build().toUriString().split("/");
+			String[] path = MvcUriComponentsBuilder.fromMethodName(FileController.class, "serveFile", image).build().toUriString().split("\\");
 			
 			Clase c= claseService.findById(clase).orElse(new Clase());
 			character.setClase(c);
