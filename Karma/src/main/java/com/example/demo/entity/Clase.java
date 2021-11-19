@@ -20,6 +20,7 @@ public class Clase {
 	private String name;
 	
 	@Lob
+	@Type(type = "org.hibernate.type.TextType")
 	private String description;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="clase")

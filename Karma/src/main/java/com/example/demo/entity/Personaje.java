@@ -21,6 +21,7 @@ public class Personaje implements Serializable{
 	private String name,image,surname;
 	
 	@Lob
+	@Type(type = "org.hibernate.type.TextType")
 	private String history;
 	
 	@Min(1)@Max(40)
