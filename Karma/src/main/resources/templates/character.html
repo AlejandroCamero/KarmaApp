@@ -46,27 +46,7 @@
             </div>
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <div class="text-center text-white" >
-                        <div th:each="history: ${histories}">
-                        	<textarea th:text="${history}" rows="20" cols="85" readonly></textarea>
-                        </div> 
-                        <br>
-                        </div>
-
-                		</div>
-                	
-                	<div class="col-xl-6">
-                        <div class="text-center text-white">
-                        <div th:each="character: ${characters}">
-                            <img class="img-fluid" th:src="@{'/assets/img/'+${character.image}}" alt="..." width="500" height="500" />
-                        </div>
-                            <br>
-                		</div>
-                	</div>
-                </div>
-                <br>
-                <div class="row justify-content-center">
-                	<div th:each="character: ${characters}">
+				<div th:each="character: ${characters}">
 	                    <div  class="col">
 	                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
 	                            <table class="table table-dark">
@@ -77,11 +57,11 @@
 								      <th scope="col">Constitution</th>
 								      <th scope="col">Intelligence</th>
 								      <th scope="col">Wisdom</th>
-								      <th scope="col">Karma</th>
+<!-- 								      <th scope="col">Karma</th>
 								      <th scope="col">Class</th>
 								      <th scope="col">Positive points</th>
 								      <th scope="col">Negative points</th>
-								      <th scope="col">Total points</th>
+								      <th scope="col">Total points</th> -->
 								    </tr>
 								  </thead>
 								  <tbody>
@@ -91,11 +71,11 @@
 								      <td scope="row" th:text="${character.constitution}"></td>
 								      <td scope="row" th:text="${character.intelligence}"></td>
 								      <td scope="row" th:text="${character.wisdom}"></td>
-								      <td scope="row" th:text="${character.karma}"></td>
+<!-- 								      <td scope="row" th:text="${character.karma}"></td>
 								      <td scope="row" th:text="${character.clase.name}"></td>
 								      <td scope="row" th:text="${character.positive}"></td>
 								      <td scope="row" th:text="${character.negative}"></td>
-								      <td scope="row" th:text="${character.negative} + ${character.positive}"></td>
+								      <td scope="row" th:text="${character.negative} + ${character.positive}"></td> -->
 								    </tr>
 								  </tbody>
 								</table>
@@ -104,6 +84,21 @@
 	                    </div>
 	                </div>
                 </div>
+                    </div>
+                	
+		<div class="col-xl-6">
+		<div class="text-center text-white">
+		<div th:each="character: ${characters}">
+		    <img class="img-fluid" th:src="@{'/assets/img/'+${character.image}}" alt="..." width="500" height="500" />
+		</div>
+		<br>
+		</div>
+		</div>
+	
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                
                 
             </div>
         </header>     
