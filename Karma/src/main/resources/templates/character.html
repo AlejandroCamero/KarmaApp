@@ -55,6 +55,7 @@
 								      <th scope="col">Constitution</th>
 								      <th scope="col">Intelligence</th>
 								      <th scope="col">Wisdom</th>
+								      <th scope="col">History</th>
 <!-- 								      <th scope="col">Karma</th>
 								      <th scope="col">Class</th>
 								      <th scope="col">Positive points</th>
@@ -69,6 +70,7 @@
 								      <td scope="row" th:text="${character.constitution}"></td>
 								      <td scope="row" th:text="${character.intelligence}"></td>
 								      <td scope="row" th:text="${character.wisdom}"></td>
+									    <td scope="row"><a href="https://docs.google.com/document/d/1q1L6TjV_7jq1h-pv4t6LghcRop1eBCYd0osKiZqeD5k/edit" class="bnt btn-info">History</a></td>
 <!-- 								      <td scope="row" th:text="${character.karma}"></td>
 								      <td scope="row" th:text="${character.clase.name}"></td>
 								      <td scope="row" th:text="${character.positive}"></td>
@@ -82,7 +84,7 @@
                 </div>
                     </div>
                 	
-		<div class="col-xl-6">
+		<div class="col">
 		<div class="text-center text-white">
 		<div th:each="character: ${characters}">
 		    <img class="img-fluid" th:src="@{'/assets/img/'+${character.image}}" alt="..." width="500" height="500" />
