@@ -9,4 +9,5 @@ public interface CharacterService {
 	public List<Personaje> showAll();
 	public Personaje findById(Long id);
 	public List<Personaje> findByClase_id(Long clase);
+	public List<Personaje> findByView(boolean status);
 }
