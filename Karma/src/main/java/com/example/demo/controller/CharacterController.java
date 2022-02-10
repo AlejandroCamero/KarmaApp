@@ -24,6 +24,7 @@ public class CharacterController {
 	private CharacterServiceImpl characterService;
 	
 
+	//NAAAAAAAAAAAAAAAA
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
