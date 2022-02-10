@@ -59,7 +59,10 @@ public class CharacterServiceImpl implements CharacterService{
 	public List<Personaje> findByClase_id(Long long1) {
 		return characterRepository.findByClase_id(long1);
 	}
-
+	
+	public List<Personaje> findByView(){
+		return characterRepository.findByView(true);
+	}
 	
 
 }
