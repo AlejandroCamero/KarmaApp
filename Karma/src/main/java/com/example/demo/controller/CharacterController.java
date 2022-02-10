@@ -49,11 +49,16 @@ public class CharacterController {
 	
 	@GetMapping("/character/{id}")
 	public String viewCharacter(@PathVariable Long id,Model model) {
-		Personaje chac = characterService.findById(id);
-		String[] history = chac.getHistory().split(";");
-		model.addAttribute("characters",chac);
-		model.addAttribute("histories",history);
-		return "character";
+		if(characterService.findById(id).getView()==false){
+			return "redirect:public/characters";	
+		}else{
+			Personaje chac = characterService.findById(id);
+			String[] history = chac.getHistory().split(";");
+			model.addAttribute("characters",chac);
+			model.addAttribute("histories",history);
+			return "character";
+		}
+		
 	}
 	
 	
