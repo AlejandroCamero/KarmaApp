@@ -12,5 +12,5 @@ import com.example.demo.entity.Personaje;
 public interface CharacterRepository extends JpaRepository<Personaje,Long>{
 	public Personaje findByName(String name);
 	public List<Personaje> findByClase_id(Long id);
-	public List<Personaje> findByViewOrderByName(boolean status);
+	public List<Personaje> findByViewOrderByNameAsc(boolean status);
 }
