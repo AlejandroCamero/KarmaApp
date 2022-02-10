@@ -41,7 +41,7 @@ public class CharacterController {
 				usuario.setPassword(null);
 				session.setAttribute("usuario", usuario);
 			}
-			model.addAttribute("characters",characterService.findByView(true));
+			model.addAttribute("characters",characterService.findByViewOrderByNameAsc(true));
 			return "characters";
 		}
 	}
