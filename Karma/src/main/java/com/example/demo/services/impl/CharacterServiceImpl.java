@@ -60,8 +60,8 @@ public class CharacterServiceImpl implements CharacterService{
 		return characterRepository.findByClase_id(long1);
 	}
 	
-	public List<Personaje> findByView(boolean status){
-		return characterRepository.findByView(status);
+	public List<Personaje> findByViewOrderByName(boolean status){
+		return characterRepository.findByViewOrderByName(status);
 	}
 	
 
