@@ -50,7 +50,7 @@ public class CharacterController {
 	@GetMapping("/character/{id}")
 	public String viewCharacter(@PathVariable Long id,Model model) {
 		if(characterService.findById(id).isView()==false){
-			return "redirect:public/characters";	
+			return "redirect:/public/characters";	
 		}else{
 			Personaje chac = characterService.findById(id);
 			String[] history = chac.getHistory().split(";");
