@@ -31,7 +31,7 @@ public class CharacterController {
 	@GetMapping("/characters")
 	public String viewAll(Authentication auth,HttpSession session,Model model) {
 		if(auth == null) {
-			model.addAttribute("characters",characterService.findByView(true));
+			model.addAttribute("characters",characterService.findByViewOrderByNameAsc(true));
 			return "characters";
 		}else{
 			String username = auth.getName();
