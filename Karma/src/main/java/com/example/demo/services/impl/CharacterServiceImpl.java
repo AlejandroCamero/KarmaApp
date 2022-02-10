@@ -61,7 +61,7 @@ public class CharacterServiceImpl implements CharacterService{
 	}
 	
 	public List<Personaje> findByViewOrderByName(boolean status){
-		return characterRepository.findByViewOrderByName(a);
+		return characterRepository.findByViewOrderByName(status);
 	}
 	
 
